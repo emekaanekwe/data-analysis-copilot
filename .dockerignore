@@ -1,0 +1,45 @@
+# Git files
+.git
+.gitignore
+.github
+
+# Python cache
+__pycache__
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Docker files (don't copy docker-compose into the image)
+docker-compose.yml
+Dockerfile
+dockerfile
+
+# Documentation
+*.md
+README.md
+
+# Temporary files
+*.log
+*.tmp
+plot.png
+
+# Environment variables (will be mounted separately)
+.env

@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  streamlit-app:
+    build: .
+    container_name: data-analysis-copilot
+    ports:
+      - "8501:8501"
+    volumes:
+      # Mount your local code into the container for live reloading
+      - .:/data-analysis-copilot
+      # Exclude these directories to avoid conflicts
+      - /data-analysis-copilot/__pycache__
+      - /data-analysis-copilot/.git
+    environment:
+      # Load environment variables from .env file
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    env_file:
+      - .env
+    command: streamlit run streamlit_app.py --server.port=8501 --server.address=0.0.0.0 --server.fileWatcherType=poll --server.runOnSave=true
+    restart: unless-stopped
+    stdin_open: true
+    tty: true

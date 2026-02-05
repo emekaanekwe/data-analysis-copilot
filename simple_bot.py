@@ -27,7 +27,18 @@ st.set_page_config(
     page_icon="💬",
     layout="centered"
 )
+'''
+def get_dataframe():
+    df = pd.DataFrame(
+        {
+            "A": [10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+            "B": [15, 25, 35, 45, 55, 65, 75, 85, 95, 105],
+            "C": [5, 15, 25, 35, 45, 55, 65, 75, 85, 95],
+        }
+    )
+    return df
 
+'''
 # Title
 st.title("💬 Simple ChatGPT Bot")
 st.caption("A simple chatbot powered by OpenAI GPT-4")
