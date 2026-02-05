@@ -13,7 +13,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Initialize OpenAI client
-#openai_client = OpenAI(api_key="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")
 open_router_client = OpenAI(
     api_key=os.getenv("API_KEY"),
     base_url="https://openrouter.ai/api/v1"
